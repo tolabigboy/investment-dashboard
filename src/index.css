@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: 300px 1fr;
+  }
+}
+.nav-link::before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 40%;
+  color: rgb(204, 24, 54);
+}
+.card-shadow {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.082);
+}
+
+@media (min-width: 764px) {
+  .upgradeStat {
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+}
+.cards {
+  display: grid;
+  --min-column-size: 225px;
+  gap: clamp(1.5rem, 5vmax, 2.5rem);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--min-column-size)), 1fr)
+  );
+  place-items: center;
+}
+.card {
+  border: 0.5px solid black;
+  @apply rounded-[1rem];
+}
