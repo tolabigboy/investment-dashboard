@@ -3,6 +3,7 @@ import { history } from "../data/history";
 
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { AiFillApple } from "react-icons/ai";
 
 const PortfolioDashboard = () => {
   ChartJS.register(ArcElement, Tooltip, Legend);
@@ -33,12 +34,12 @@ const PortfolioDashboard = () => {
   };
   return (
     <div className="mt-[2rem]">
-      <div className="card-portfolio flex justify-between items-center">
+      <div className="flex justify-between items-center">
         <div>Portfolio History</div>
         <div>Per Industry</div>
       </div>
 
-      <div className="flex justify-center gap-5 flex-wrap w-[80%]">
+      <div className="card-portfolio grid gap-5 mt-[2rem]">
         <div className="card  bg-[#fbfbfb] p-[31px]">
           <div className="date font-bold relative after:absolute after:w-[24px] after:border-gray-500 after:left-0 after:bottom-0 after:border-b-[3px] pb-[10px]">
             NOV 19
@@ -69,43 +70,43 @@ const PortfolioDashboard = () => {
             <div className="text-[#69ccca] font-bold">234.23(30.34%)</div>
           </div>
         </div>
-        <div className="card  bg-blue-700 p-[31px] ml-4">
+        <div className="card  bg-blue-700 md:ml-4 grid place-content-center">
           <Doughnut data={data} />
         </div>
       </div>
-      <div className="portfolio-symbols">
+      <div className="portfolio-symbols my-[2rem] flex items-center justify-between">
         <div className="symbol">
-          <p>SYMBOL</p>
-          <div>
-            <img src="" alt="" /> <span>AAPL</span>
+          <p className="text-[10px]">SYMBOL</p>
+          <div className="flex items-center justify-between">
+            <AiFillApple /> <span className="pl-[.5rem] font-bold">AAPL</span>
           </div>
         </div>
         <div className="price">
-          <p>PRICE</p>
+          <p className="text-[10px]">PRICE</p>
           <div>= $ 234.00</div>
         </div>
         <div className="return">
-          <p>% RETURN</p>
-          <div>= $ 234.00</div>
+          <p className="text-[10px]">% RETURN</p>
+          <div className="text-[#0aaeab]">= $ 234.00</div>
         </div>
         <div className="net-cost">
-          <p>TOTAL NET COST</p>
+          <p className="text-[10px]">TOTAL NET COST</p>
           <div>= $ 234.00</div>
         </div>
         <div className="market-value">
-          <p>MARKET VALUE</p>
+          <p className="text-[10px]">MARKET VALUE</p>
           <div>= $ 234.00</div>
         </div>
         <div className="total-gain">
-          <p>TOTAL GAIN</p>
-          <div>= $ 234.00</div>
+          <p className="text-[10px]">TOTAL GAIN</p>
+          <div className="text-[#0aaeab]">= $ 234.00</div>
         </div>
         <div className="daily-gain">
-          <p>DAILY GAIN</p>
-          <div>= $ 234.00</div>
+          <p className="text-[10px]">DAILY GAIN</p>
+          <div className="text-[#fb5253]">= $ 234.00</div>
         </div>
         <div className="portfolio">
-          <p>% PORTFOLIO</p>
+          <p className="text-[10px]">% PORTFOLIO</p>
           <div>= $ 234.00</div>
         </div>
       </div>

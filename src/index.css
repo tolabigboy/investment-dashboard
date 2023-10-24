@@ -29,6 +29,12 @@
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
   }
+  .card-portfolio {
+    display: flex;
+    /* justify-content: center;
+    flex-wrap: wrap;
+    width: 80%; */
+  }
 }
 .cards {
   display: grid;

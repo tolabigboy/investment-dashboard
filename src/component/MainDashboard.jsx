@@ -86,7 +86,7 @@ const MainDashboard = () => {
             </div>
           </div>
         </div>
-        <div className="upgradeStat grid gap-4">
+        <div className="upgradeStat grid gap-4 mt-[1rem]">
           <div
             style={{ gridTemplateRows: "40px" }}
             className="card-shadow grid  h-[253px] rounded-[1rem] bg-[#ffffff]"

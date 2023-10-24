@@ -1,13 +1,14 @@
 import React from "react";
 import { links } from "../data/constant";
 import { Link, NavLink } from "react-router-dom";
+import profileImg from "../assets/profile.svg";
 
 const Sidebar = () => {
   return (
     <div className="px-6 pt-9 hidden lg:block">
-      <div className="user">
-        <img src="" alt="" />
-        <div className="">
+      <div className="user flex">
+        <img className="w-[40px]" src={profileImg} alt="" />
+        <div className="pl-[.5rem]">
           <div className="text-[14px] font-bold">Kristen Ramos</div>
           <p className="pt-[8px]">kristen.ramos@email.com</p>{" "}
         </div>
